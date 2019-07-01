@@ -1,0 +1,4 @@
+https://openlibra.com/es/book/download/introduccion-a-la-programacion-orientada-a-objetos-con-java
+http://dalila.sip.ucm.es/~manuel/JSW1/Slides/Swing.pdf
+https://eva.fing.edu.uy/pluginfile.php/94592/mod_resource/content/5/TeoricoSwing2017.pdf
+https://www.w3schools.com/java/java_getstarted.asp
