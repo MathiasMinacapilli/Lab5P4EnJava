@@ -1,16 +1,26 @@
-package CapaLogica;
+package CapaLogica.Controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+//Interface
+import CapaLogica.Interfaces.UserI;
+
+//Classes
+import CapaLogica.User;
+
+//Datatypes
 import DataTypes.DataUser;
 
 public class UserController implements UserI {
-	Set<User> users = new HashSet<User>();
-	int cantidadUsuarios = 0;
+
+	private static UserController instance = null;
+
+	private Set<User> users = new HashSet<User>();
+	private int cantidadUsuarios = 0;
 	
-	public UserController() {
+	private UserController() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		this.users.add(new User("Mathias", LocalDateTime.now()));
 		this.users.add(new User("Roberto", LocalDateTime.now()));
@@ -18,6 +28,13 @@ public class UserController implements UserI {
 		this.cantidadUsuarios++;
 	}
 	
+	public static UserController getInstance() {
+		if(UserController.instance == null) {
+			UserController.instance = new UserController();
+		}
+		return UserController.instance;
+	}
+
 	//Getters
 	@Override
 	public int getCantidadUsuarios() {

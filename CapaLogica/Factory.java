@@ -1,9 +1,12 @@
 package CapaLogica;
 
+import CapaLogica.Interfaces.*;
+import CapaLogica.Controllers.*;
+
 public class Factory {
 	
-	public UserI getUserI() {
-		return new UserController();
+	public void getClientI() {
+		
 	}
 	
 }

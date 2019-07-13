@@ -1,11 +1,11 @@
 package DataTypes;
 
-public class DataUser {
+public class DtClient {
 	
-	String name, dateCreated;
+	private String name, dateCreated;
 	
 	//Constructor
-	public DataUser(String name, String dateCreated) {
+	public DtClient(String name, String dateCreated) {
 		this.name = name;
 		this.dateCreated = dateCreated;
 	}
